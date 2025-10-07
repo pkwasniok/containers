@@ -4,9 +4,6 @@
 #include <string.h>
 
 int array_list_init(array_list_t* this, size_t item_size, size_t capacity) {
-    if (this->buffer != NULL)
-        return CONTAINER_ERR_INIT;
-
     this->buffer = calloc(capacity, item_size);
 
     if (this->buffer == NULL)
